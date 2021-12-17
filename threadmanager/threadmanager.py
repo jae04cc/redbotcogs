@@ -31,13 +31,21 @@ async def create_thread(bot, channel: discord.TextChannel, message: discord.Mess
 
     return (await bot.http.request(r, json=fields, reason=reason))["id"]
 
-async def thread(self, ctx, *, name: str):
+class ThreadManager(commands.Cog):
     """
-    Create a new thread from this channel
-    You must have proper permissions set
+    Better Thread Manager
     """
-    channel = ctx.channel
-    guild = ctx.guild
-    user = ctx.author
 
-    await create_thread(self.bot, channel, ctx.message, name=name, archive=archive)
+    def __init__(self, bot):
+        self.bot = bot
+
+    async def thread(self, ctx, *, name: str):
+        """
+        Create a new thread from this channel
+        You must have proper permissions set
+        """
+        channel = ctx.channel
+        guild = ctx.guild
+        user = ctx.author
+
+        await create_thread(self.bot, channel, ctx.message, name=name, archive=archive)

@@ -1,6 +1,5 @@
 import discord
 from redbot.core import Config, checks, commands
-import requests
 
 async def create_thread(self,name,minutes,message):
     token = 'Bot ' + self._state.http.token

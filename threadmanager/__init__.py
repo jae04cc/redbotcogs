@@ -1,5 +1,5 @@
-from .mycog import MyCog
+from .threadmanager import threadmanager
 
 
 def setup(bot):
-    bot.add_cog(MyCog(bot))
+    bot.add_cog(threadmanager(bot))

@@ -16,14 +16,14 @@ class threadmanager(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        #self.config = Config.get_conf(self, identifier=165164165133023130, force_registration=True)
+        self.config = Config.get_conf(self, identifier=123456789009876543216969420, force_registration=True)
 
         # allowed roles maps role id (str) -> number of threads each user can create with this role (int)
         # threads maps member id str -> list of active thread ids (int) that the user created in the channel
-        #default_channel = {"allowed_roles": {}, "threads": {}}
-        #default_guild = {"archive": 60}
-        #self.config.register_channel(**default_channel)
-        #self.config.register_guild(**default_guild)
+        default_channel = {"allowed_roles": {}, "threads": {}}
+        default_guild = {"archive": 60}
+        self.config.register_channel(**default_channel)
+        self.config.register_guild(**default_guild)
 
     @commands.group()
     @commands.guild_only()

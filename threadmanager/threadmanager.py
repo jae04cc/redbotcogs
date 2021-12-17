@@ -39,5 +39,5 @@ async def thread(self, ctx, *, name: str):
     channel = ctx.channel
     guild = ctx.guild
     user = ctx.author
-    
+
     await create_thread(self.bot, channel, ctx.message, name=name, archive=archive)

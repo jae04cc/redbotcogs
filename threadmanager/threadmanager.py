@@ -8,6 +8,10 @@ class threadmanager(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
+    @commands.Cog.listener
+    async def on_message(self, message: discord.Message):
+        if message.content.startswith('oh hai mark'):
+            await message.channel.send('oh hai johnny')
     
     @commands.command()
     async def mycom(self, ctx):

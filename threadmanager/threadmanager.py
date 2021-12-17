@@ -31,7 +31,7 @@ async def create_thread(bot, channel: discord.TextChannel, message: discord.Mess
 
     return (await bot.http.request(r, json=fields, reason=reason))["id"]
 
-class ThreadManager(commands.Cog):
+class threadmanager(commands.Cog):
     """
     Better Thread Manager
     """

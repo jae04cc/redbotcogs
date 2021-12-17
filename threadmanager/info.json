@@ -1,0 +1,8 @@
+{
+    "author" : ["jae04cc"],
+    "install_msg" : "Thanks for installing my cog!",
+    "name" : "Thread Manager",
+    "short" : "Basic thread manager",
+    "description" : "A very basic thread manager, first use case is creating a thread out of a specific message.",
+    "tags" : ["Threads"]
+}

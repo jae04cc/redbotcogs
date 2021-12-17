@@ -16,6 +16,6 @@ class threadmanager(commands.Cog):
         await ctx.send("I can do stuff!")
     
     @commands.Cog.listener
-    async def on_message(self, message: discord.Message):
+    async def on_message(message):
         if message.content.startswith('oh hai mark'):
             await message.channel.send('oh hai johnny')

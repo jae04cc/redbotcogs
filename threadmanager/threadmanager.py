@@ -25,6 +25,13 @@ class threadmanager(commands.Cog):
         self.config.register_channel(**default_channel)
         self.config.register_guild(**default_guild)
 
+    @client.event
+    async def on_message(message):
+        if message.author == client.user:
+            return
+
+            if message.content.startswith('oh hai mark'):
+                await message.channel.send('oh hai johnny')
     @commands.group()
     @commands.guild_only()
     @checks.admin_or_permissions(administrator=True)

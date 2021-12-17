@@ -20,10 +20,10 @@ class threadmanager(commands.Cog):
 
         # allowed roles maps role id (str) -> number of threads each user can create with this role (int)
         # threads maps member id str -> list of active thread ids (int) that the user created in the channel
-        default_channel = {"allowed_roles": {}, "threads": {}}
-        default_guild = {"archive": 60}
-        self.config.register_channel(**default_channel)
-        self.config.register_guild(**default_guild)
+        #default_channel = {"allowed_roles": {}, "threads": {}}
+        #default_guild = {"archive": 60}
+        #self.config.register_channel(**default_channel)
+        #self.config.register_guild(**default_guild)
 
     @commands.group()
     @commands.guild_only()

@@ -9,7 +9,7 @@ from redbot.core.utils.menus import menu, DEFAULT_CONTROLS
 from .discord_thread_feature import create_thread, add_user_thread, get_active_threads
 
 
-class ThreadManager(commands.Cog):
+class threadmanager(commands.Cog):
     """
     Better Thread Manager
     """
@@ -106,7 +106,7 @@ class ThreadManager(commands.Cog):
         """This does stuff!"""
         # Your code will go here
         await ctx.send("I can do stuff!")
-        
+
     @commands.guild_only()
     async def thread(self, ctx, *, name: str):
         """
